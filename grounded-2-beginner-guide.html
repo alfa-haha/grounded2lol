@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Grounded 2 Beginner Guide: Master Your Survival Journey in 2025</title>
+    <meta name="description"
+        content="Complete Grounded 2 beginner guide for 2025. Master survival, crafting, buggies, and base building in Brook Hollow Park. Essential tips for new players.">
+    <link rel="canonical" href="https://grounded2.lol/">
+
+    <!-- SEO优化的meta标签 -->
+    <meta name="keywords"
+        content="Grounded 2 beginner guide, Grounded 2 tips, survival guide, crafting guide, buggy guide, base building">
+    <meta property="og:title" content="The Ultimate Grounded 2 Beginner Guide: Master Your Survival Journey in 2025">
+    <meta property="og:description"
+        content="Complete Grounded 2 beginner guide for 2025. Master survival, crafting, buggies, and base building in Brook Hollow Park.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://grounded2.lol/grounded-2-beginner-guide">
+
+    <!-- Font Awesome 6.5.1 - 最新社交媒体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* 全局重置和基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Grounded 2 inspired color palette - 受游戏启发的配色方案 */
+            --primary-green: #4CAF50;
+            --accent-orange: #FF6B35;
+            --dark-green: #2E7D32;
+            --light-green: #81C784;
+            --brown-earth: #8D6E63;
+            --yellow-sun: #FFC107;
+            --blue-water: #2196F3;
+            --purple-mystery: #9C27B0;
+            --dark-bg: #1A1A1A;
+            --light-bg: #F5F5F5;
+            --text-dark: #333;
+            --text-light: #FFF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-orange);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* 移动端菜单按钮 */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 主要内容区域 */
+        main {
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 文章头部区域 */
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: var(--text-light);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .article-header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .article-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .article-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* 文章内容区域 */
+        .article-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* 目录样式 */
+        .table-of-contents {
+            position: sticky;
+            top: 120px;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .toc-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .toc-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.3rem 0;
+            border-left: 3px solid transparent;
+            padding-left: 1rem;
+        }
+
+        .toc-list a:hover {
+            color: var(--accent-orange);
+            border-left-color: var(--accent-orange);
+        }
+
+        .toc-list a.active {
+            color: var(--primary-green);
+            font-weight: bold;
+            border-left-color: var(--primary-green);
+        }
+
+        /* 文章主体内容 */
+        .article-body {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            font-size: 2.2rem;
+            color: var(--dark-green);
+            margin: 2.5rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-green);
+        }
+
+        .article-body h3 {
+            font-size: 1.6rem;
+            color: var(--dark-green);
+            margin: 2rem 0 1rem 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .article-body strong {
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .article-body ul li::marker {
+            color: var(--primary-green);
+        }
+
+        /* 视频嵌入样式 */
+        .video-container {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 提示框样式 */
+        .tip-box {
+            background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--accent-orange);
+        }
+
+        .tip-box strong {
+            color: var(--yellow-sun);
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-orange);
+            opacity: 1;
+        }
+
+        .contact-text {
+            color: var(--text-light);
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-email {
+            color: #00BCD4;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+
+
+        /* 文章操作区块样式 */
+        .article-actions {
+            padding: 3rem 0;
+            background: white;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .actions-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: var(--primary-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .back-btn:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .share-section {
+            text-align: center;
+        }
+
+        .share-title {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .share-btn.facebook {
+            background: #1877F2;
+        }
+
+        .share-btn.tiktok {
+            background: #000000;
+        }
+
+        .share-btn.instagram {
+            background: linear-gradient(45deg, #F56040, #E1306C, #833AB4);
+        }
+
+        .share-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .share-btn.telegram {
+            background: #0088CC;
+        }
+
+        .share-btn.copy-link {
+            background: var(--text-dark);
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .actions-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .share-buttons {
+                flex-wrap: nowrap;
+                gap: 0.5rem;
+                justify-content: center;
+            }
+        }
+
+        /* 响应式设计 - Footer */
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: left;
+            }
+            
+            .social-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* 社交媒体图标样式 - 白色图标 */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: flex-start;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(139, 69, 69, 0.8);
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(139, 69, 69, 0.6);
+        }
+
+        .social-icon:hover {
+            background: rgba(139, 69, 69, 1);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 69, 69, 0.4);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .article-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .table-of-contents {
+                position: static;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-bg);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .article-title {
+                font-size: 2.2rem;
+            }
+
+            .article-content {
+                padding: 2rem 1rem;
+            }
+
+            .article-body {
+                padding: 2rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.8rem;
+            }
+
+            .article-body h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-title {
+                font-size: 1.8rem;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .article-body {
+                padding: 1.5rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.6rem;
+            }
+
+            .article-tags {
+                gap: 0.5rem;
+            }
+
+            .tag {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+            }
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent-orange);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Related Articles 模块样式 */
+        .related-articles {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 3px solid var(--primary-green);
+        }
+
+        .related-title {
+            font-size: 2rem;
+            color: var(--dark-green);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-green);
+        }
+
+        .related-image {
+            width: 100%;
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .related-card:hover .related-image img {
+            transform: scale(1.05);
+        }
+
+        .related-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .related-card:hover .related-image::after {
+            opacity: 1;
+        }
+
+        .related-content {
+            padding: 1.5rem;
+        }
+
+        .related-card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-green);
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .related-card-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .related-card-title a:hover {
+            color: var(--primary-green);
+        }
+
+        .related-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .related-tag {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--primary-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* 响应式设计 - Related Articles */
+        @media (max-width: 1024px) {
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .related-articles {
+                margin-top: 3rem;
+                padding-top: 2rem;
+            }
+
+            .related-title {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .related-image {
+                height: 150px;
+                font-size: 2rem;
+            }
+
+            .related-content {
+                padding: 1.2rem;
+            }
+
+            .related-card-title {
+                font-size: 1.1rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                🐛 Grounded 2
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#reviews">Reviews</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="guide.html">Guides</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 文章头部区域 -->
+        <section class="article-header">
+            <div class="article-header-container">
+                <h1 class="article-title">The Ultimate Grounded 2 Beginner Guide: Master Your Survival Journey in 2025</h1>
+                <div class="article-meta">
+                    <span>📅 Published: August 5， 2025</span>
+                    <span>⏱️ Read Time: 15 min</span>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">Beginner Guide</span>
+                    <span class="tag">Survival Tips</span>
+                    <span class="tag">Crafting</span>
+                    <span class="tag">Base Building</span>
+                    <span class="tag">Buggies</span>
+                    <span class="tag">Combat</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文章内容区域 -->
+        <div class="article-content">
+            <!-- 目录 -->
+            <aside class="table-of-contents">
+                <h3 class="toc-title">📋 Table of Contents</h3>
+                <ul class="toc-list">
+                    <li><a href="#introduction">Why You Need This Guide</a></li>
+                    <li><a href="#omni-tool">Getting Started: Omni Tool System</a></li>
+                    <li><a href="#analyzer">Mastering the Analyzer System</a></li>
+                    <li><a href="#first-day">Your First Day Survival Blueprint</a></li>
+                    <li><a href="#buggies">Buggies: Your New Best Friends</a></li>
+                    <li><a href="#base-building">Base Building Strategy</a></li>
+                    <li><a href="#gear-system">The New Gear System</a></li>
+                    <li><a href="#essential-tips">Essential Beginner Tips</a></li>
+                    <li><a href="#looking-ahead">Looking Ahead</a></li>
+                </ul>
+            </aside>
+
+            <!-- 文章主体 -->
+            <article class="article-body">
+                <p>Are you ready to shrink down and tackle the massive world of <strong>Grounded 2</strong>? This comprehensive <strong>Grounded 2 starting guide</strong> will give you everything you need to survive Brook Hollow Park like a pro. Whether you're a returning veteran or completely new to the franchise, our <strong>beginner guide Grounded 2</strong> covers all the essential systems, strategies, and survival tips you'll need to thrive.</p>
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xBNzGB11DBo?si=ou2cL7TZqcnHpUr7&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <h2 id="introduction">Why You Need This Grounded 2 Guide</h2>
+                <p>Brook Hollow Park ain't your backyard anymore, folks. This <strong>guide Grounded 2025</strong> brings you up to speed on Obsidian Entertainment's latest multiplayer survival masterpiece. We've spent hundreds of hours in the original game, and now we're bringing that hardcore experience to help you navigate this bigger, badder adventure.</p>
+
+                <h2 id="omni-tool">Getting Started: The Omni Tool System</h2>
+                
+                <h3>Understanding the Game-Changing Omni Tool</h3>
+                <p>Everything in your <strong>Grounded 2 beginner</strong> experience starts with mastering the revolutionary Omni Tool system. This ain't your typical survival game setup – Obsidian has streamlined the whole shebang by merging your axe, hammer, shovel, and wrench into one versatile tool.</p>
+
+                <p>Here's the deal: Following the main quest after the tutorial leads you straight to a ranger station (these are your new best friends scattered throughout the park). Inside, you'll snag your first Omni Tool and unlock the <strong>Omni Axe</strong> – your ticket to gathering basic resources like grass, dry grass, and dandelions.</p>
+
+                <div class="tip-box">
+                    <strong>Pro tip for beginners:</strong> The level one Omni Axe is just the starting point. You'll need to upgrade this bad boy if you want to harvest all the premium resources Brook Hollow Park has to offer.
+                </div>
+
+                <h3>Upgrading Your Omni Tools: A Critical Survival Strategy</h3>
+                <p>One of the most important <strong>Grounded 2 beginner tips</strong> involves understanding the upgrade system. To unlock new Omni Tools or beef up your existing ones, you'll need to:</p>
+
+                <ol>
+                    <li>Gather the required resources</li>
+                    <li>Head back to any ranger station</li>
+                    <li>Invest in upgrades when you have the materials</li>
+                </ol>
+
+                <p>Once you've unlocked the Omni Axe, Omni Hammer, and Omni Shovel, you're basically set to harvest most items in the park. These resources become the backbone of your base building, gear crafting, and overall progression.</p>
+
+                <h2 id="analyzer">Mastering the Analyzer System</h2>
+
+                <h3>Why Analysis is Everything in This Grounded 2 Starting Guide</h3>
+                <p>Every ranger station packs an analyzer, and early game? You'll be glued to this thing. Here's why this system is crucial for any <strong>beginner tips Grounded 2</strong> strategy:</p>
+
+                <p><strong>The Analyzer Breakdown:</strong></p>
+                <ul>
+                    <li>Works on a charge system (4 items at full charge)</li>
+                    <li>Unlocks recipes and blueprints for analyzed items</li>
+                    <li>Grants brain power (your overarching XP system)</li>
+                    <li>Each station operates independently</li>
+                </ul>
+
+                <p><strong>Smart Analysis Strategy:</strong> Analyze a blade of grass to unlock basic tier grass building materials. Toss in a weed stem (yeah, you gotta carry it there), and boom – you've got foundation pieces for a rock-solid base.</p>
+
+                <p>The brain power system acts as your safety net, ensuring you don't miss critical crafting recipes during exploration. Every level-up unlocks a set number of recipes automatically.</p>
+
+                <h2 id="first-day">Your First Day Survival Blueprint</h2>
+
+                <h3>Following the Main Quest: Your North Star</h3>
+                <p>This <strong>Grounded 2 classes guide</strong> approach to your first day keeps things simple but effective:</p>
+
+                <ol>
+                    <li><strong>Get Your Omni Tool:</strong> Follow the main quest to the ranger station</li>
+                    <li><strong>Gather Basic Resources:</strong> Use your new Omni Axe to collect grass and dandelions</li>
+                    <li><strong>Continue the Quest:</strong> Head to the hill behind the ranger station</li>
+                    <li><strong>Underground Adventure:</strong> You'll drop into a small underground area and meet a key character (no spoilers here!)</li>
+                    <li><strong>Snack Bar Anthill:</strong> Your first real challenge awaits</li>
+                </ol>
+
+                <div class="tip-box">
+                    <strong>Combat Prep:</strong> Before hitting that final chamber in the snack bar anthill, craft some sort of weapon. You'll face your first red soldier ant, and going in empty-handed is asking for trouble.
+                </div>
+
+                <h3>Scoring Your First Optical Disc</h3>
+                <p>That optical disc you'll find? It's pure gold. These progression items unlock entire sets of craftables in the science shop when inserted into ranger stations. The <strong>Snack Bar Turbo Optical Disc</strong> gives you access to:</p>
+
+                <ul>
+                    <li>Hatchery (absolute must-have)</li>
+                    <li>Cooking 101</li>
+                    <li>Multi-story bases</li>
+                    <li>Clover roofs</li>
+                    <li>Pellet foundations</li>
+                    <li>Fibrous furnishings</li>
+                </ul>
+
+                <p><strong>Priority Purchase:</strong> Grab that hatchery first – it's your gateway to the game's coolest feature.</p>
+
+                <h2 id="buggies">Buggies: Your New Best Friends</h2>
+
+                <h3>Getting Your First Mount: The Red Soldier Ant</h3>
+                <p>One of the most exciting <strong>Grounded 2 beginner tips</strong> involves unlocking buggies – rideable bug companions that'll transform your entire gameplay experience. Here's your step-by-step roadmap:</p>
+
+                <p><strong>Prerequisites:</strong></p>
+                <ol>
+                    <li>Research the hatchery at a ranger station</li>
+                    <li>Build the actual hatchery (place it on ground, not flooring – trust us on this one)</li>
+                    <li>Construct an ant nest for storage</li>
+                </ol>
+
+                <h3>The Hatchery Anthill Run</h3>
+                <p>Just north of your park entrance sits the hatchery anthill – your ticket to that first buggy. But don't go in half-cocked:</p>
+
+                <p><strong>Essential Gear:</strong></p>
+                <ul>
+                    <li>Decent armor</li>
+                    <li>Best weapons you can craft</li>
+                    <li>Torches (this place gets pitch black)</li>
+                </ul>
+
+                <p><strong>Navigation Strategy:</strong> Follow the red and white wire fixed to the cave ceiling. It'll guide you past an Omni base and straight to the nursery where those precious red soldier ant eggs are waiting.</p>
+
+                <p><strong>Extraction Tips:</strong></p>
+                <ul>
+                    <li>Clear bugs on your way IN (you'll be carrying an egg on the way out)</li>
+                    <li>Follow the wire back for easy exit</li>
+                    <li>Sprint back to your hatchery</li>
+                </ul>
+
+                <p><strong>Incubation Process:</strong> You'll need various resources (grab acorns from the southwest oak tree if you're missing any). Pop that egg in the hatchery and wait about 12 minutes real-time, or just sleep in your lean-to to skip the wait entirely.</p>
+
+                <h3>Why the Red Soldier Ant Rocks</h3>
+                <p>This <strong>beginner guide Grounded 2</strong> wouldn't be complete without explaining why this buggy is game-changing:</p>
+
+                <ul>
+                    <li><strong>Enhanced mobility:</strong> Traverse the world way faster</li>
+                    <li><strong>Combat versatility:</strong> Fight mounted or dismount for tag-team action</li>
+                    <li><strong>Resource gathering:</strong> Master at harvesting grass and weed stems</li>
+                    <li><strong>Aggro management:</strong> Your ant buddy draws enemy attention</li>
+                </ul>
+
+                <h2 id="base-building">Base Building Strategy: Location is Everything</h2>
+
+                <h3>Choosing Your Spot: Elevation is Key</h3>
+                <p>Brook Hollow Park is massive, and your base location can make or break your survival experience. Here are the non-negotiables for any solid <strong>Grounded 2 starting guide</strong>:</p>
+
+                <p><strong>Why Build High:</strong></p>
+                <ol>
+                    <li><strong>Terrain Freedom:</strong> No more adapting to wonky ground geometry</li>
+                    <li><strong>Future-Proofing:</strong> Better access for zip lines and flying mounts</li>
+                    <li><strong>Defense Advantage:</strong> Ground enemies can't easily reach you</li>
+                    <li><strong>Single Point Entry:</strong> Funnel attackers into manageable chokepoints</li>
+                </ol>
+
+                <p><strong>Smart Foundation Strategy:</strong> Establish your base on rocks, logs, or elevated terrain. This creates natural barriers and gives you tactical advantages during those coordinated bug attacks (yeah, they're coming).</p>
+
+                <h3>Construction Best Practices</h3>
+                <p>Following proper <strong>Grounded 2 beginner tips</strong> for building:</p>
+
+                <ul>
+                    <li><strong>Start Small:</strong> Don't go crazy with grass pieces – you'll upgrade to sturdier materials quickly</li>
+                    <li><strong>Chest Placement:</strong> Keep storage within crafting radius for automatic resource pulling</li>
+                    <li><strong>Name Your Chests:</strong> Use the interface to label everything for easy organization</li>
+                    <li><strong>Repair Prep:</strong> Unlock that Omni Wrench for base repairs (currently free, but expect changes)</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>Defensive Must-Have:</strong> Acorn turrets are your best friend. These player-operated beauties cut through most bugs with ease. Get fancy with angled ceiling placement for better ground coverage.
+                </div>
+
+                <h2 id="gear-system">The New Gear System: RPG Meets Survival</h2>
+
+                <h3>Understanding Grounded 2 Classes Guide Philosophy</h3>
+                <p>Forget random weapons and mismatched armor – <strong>Grounded 2</strong> introduces proper RPG gear sets that define your playstyle. This <strong>Grounded 2 classes guide</strong> section breaks down the four main archetypes:</p>
+
+                <p><strong>Rogue Build (Red Ant Armor):</strong></p>
+                <ul>
+                    <li>Increased crit chance on final combo hits</li>
+                    <li>Reduced stamina cost for red ant weapons</li>
+                    <li>Perfect for hit-and-run tactics</li>
+                </ul>
+
+                <p><strong>Fighter Build (Ladybug Armor):</strong></p>
+                <ul>
+                    <li>Increased threat generation</li>
+                    <li>Reduced blocking stamina drain</li>
+                    <li>Tank role for team play</li>
+                </ul>
+
+                <p><strong>Ranger Build (Grub Armor):</strong></p>
+                <ul>
+                    <li>Boosted weak point damage</li>
+                    <li>Faster charged attacks</li>
+                    <li>Precision combat specialist</li>
+                </ul>
+
+                <p><strong>Mage Build (Butterfly Armor):</strong></p>
+                <ul>
+                    <li>Reduced magical staff stamina costs</li>
+                    <li>Perfect block creates temporary shields</li>
+                    <li>Support and crowd control focus</li>
+                </ul>
+
+                <h3>Trinkets: Fine-Tuning Your Build</h3>
+                <p>Trinkets let you push these archetypes even further. Take the <strong>Volatile Capacitor</strong> – it adds shock damage to melee attacks and gives you bug overload chances. As content expands, expect more gear sets to blur these traditional boundaries.</p>
+
+                <p><strong>Team Strategy:</strong> In multiplayer, coordinate your builds. Having a proper tank, DPS, and support setup makes tackling tough content way more manageable.</p>
+
+                <h2 id="essential-tips">Essential Beginner Tips Grounded 2 Players Need</h2>
+
+                <h3>Resource Management Mastery</h3>
+                <ul>
+                    <li>Analyze everything – seriously, everything</li>
+                    <li>Use multiple ranger stations when you're resource-heavy</li>
+                    <li>Sleep to skip waiting periods (works for egg hatching too)</li>
+                    <li>Name and organize your storage systems early</li>
+                </ul>
+
+                <h3>Combat Fundamentals</h3>
+                <ul>
+                    <li>Craft weapons before major encounters</li>
+                    <li>Use your buggy as a combat partner, not just transportation</li>
+                    <li>Master the timing on different armor set bonuses</li>
+                    <li>Don't neglect defensive structures like acorn turrets</li>
+                </ul>
+
+                <h3>Progression Priorities</h3>
+                <ol>
+                    <li>Get your Omni Tool and start upgrading</li>
+                    <li>Unlock the hatchery and get your first buggy</li>
+                    <li>Establish an elevated, defensible base</li>
+                    <li>Focus on one gear archetype early on</li>
+                    <li>Always follow main quest markers for major unlocks</li>
+                </ol>
+
+                <h2 id="looking-ahead">Looking Ahead: What's Next in Your Grounded 2 Journey</h2>
+                <p>This <strong>guide Grounded 2025</strong> covers the essentials, but remember – we're dealing with an early access title. Systems will evolve, new content will drop, and strategies will adapt. The fundamentals we've covered here give you the solid foundation you need to tackle whatever Obsidian throws at us next.</p>
+
+                <p>The orb weaver spider buggy is already in-game (though not early-game accessible), and we know zip lines are coming based on the original Grounded's roadmap. Stay flexible, keep experimenting, and most importantly – have fun shrinking down to ant size!</p>
+
+                <p>Whether you're looking for <strong>Grounded 2 beginner tips</strong> or diving deep into advanced strategies, mastering these core systems puts you on the path to survival success. Brook Hollow Park is massive, dangerous, and full of surprises – but with this foundation, you're ready to take it all on.</p>
+
+                <p>Now get out there and start your tiny adventure. The bugs are waiting, and trust me – they're not gonna go easy on you just because you're new to the neighborhood.</p>
+
+                <!-- 导航和分享区块 -->
+                <section class="article-actions">
+                <div class="container">
+                    <div class="actions-content">
+                        <!-- 左侧：返回按钮 -->
+                        <div class="back-to-guide">
+                            <a href="guide.html" class="back-btn">
+                                <i class="fas fa-arrow-left"></i>
+                                Back to All Guides
+                            </a>
+                        </div>
+
+                        <!-- 右侧：分享功能 -->
+                        <div class="share-section">
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook" title="Share on Facebook" data-platform="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="share-btn tiktok" title="Share on TikTok" data-platform="tiktok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="#" class="share-btn instagram" title="Share on Instagram" data-platform="instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="share-btn whatsapp" title="Share on WhatsApp" data-platform="whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="#" class="share-btn telegram" title="Share on Telegram" data-platform="telegram">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </a>
+                                <a href="#" class="share-btn link" title="Copy Link" data-platform="link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- Related Articles 模块 -->
+                <section class="related-articles">
+                    <h3 class="related-title">
+                        🔗 Related Grounded 2 Guides
+                    </h3>
+                    <div class="related-grid">
+                        <article class="related-card">
+                            <a href="grounded-2-dual-wielding-weapons.html" style="text-decoration: none; color: inherit;">
+                                <div class="related-image">
+                                    <img src="assets/images/blog/thumbnails/grounded-2-dual-wielding-weapons-thumb.jpg" alt="Grounded 2 Dual Wielding Weapons" loading="lazy">
+                                </div>
+                                <div class="related-content">
+                                    <h4 class="related-card-title">
+                                        How to Get Unique Dual-Wielding Weapons: Ice Sickles & Northern Shredders
+                                    </h4>
+                                    <div class="related-meta">
+                                        <span class="related-tag">Weapon Guide</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="related-card">
+                            <a href="hidden-grounded-2-secrets.html" style="text-decoration: none; color: inherit;">
+                                <div class="related-image">
+                                    <img src="assets/images/blog/thumbnails/hidden-grounded-2-secrets-thumb.jpg" alt="Hidden Grounded 2 Secrets" loading="lazy">
+                                </div>
+                                <div class="related-content">
+                                    <h4 class="related-card-title">
+                                        Hidden Grounded 2 Secrets: Advanced Tips That Will Change Your Game
+                                    </h4>
+                                    <div class="related-meta">
+                                        <span class="related-tag">Advanced Tips</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+            </article>
+        </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- 第一栏：Logo和社交媒体 -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        🐜 Grounded 2 lol
+                    </div>
+                    <p class="footer-tagline">Master the miniature world with our comprehensive survival guides and strategies.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Facebook" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter/X" aria-label="Follow us on Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Reddit" aria-label="Join our Reddit community">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Discord" aria-label="Join our Discord server">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 第二栏：有用链接 -->
+                <div class="footer-section">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="guide.html">Grounded 2 beginner guide</a></li>
+                        <li><a href="guide.html">Grounded 2 classes guide</a></li>
+                        <li><a href="guide.html">Grounded 2 starting tips</a></li>
+                        <li><a href="guide.html">Grounded handle weapons</a></li>
+                        <li><a href="guide.html">Grounded handle build</a></li>
+                    </ul>
+                </div>
+
+                <!-- 第三栏：联系方式 -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p class="contact-text">Found a mistake or got a better idea? Hit me up!</p>
+                    <a href="mailto:hello@grounded2.lol" class="contact-email">hello@grounded2.lol</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grounded 2 lol. All rights reserved.</p>
+                <p>This site is not affiliated with Obsidian or Grounded 2.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        // 处理缩略图加载失败的情况
+        document.addEventListener('DOMContentLoaded', function() {
+            const relatedImages = document.querySelectorAll('.related-image img');
+            
+            relatedImages.forEach((img, index) => {
+                img.addEventListener('error', function() {
+                    const container = this.parentElement;
+                    const icons = ['⚔️', '🔮'];
+                    
+                    // 移除图片
+                    this.style.display = 'none';
+                    
+                    // 添加回退样式和图标
+                    container.style.background = 'linear-gradient(135deg, var(--primary-green), var(--light-green))';
+                    container.style.display = 'flex';
+                    container.style.alignItems = 'center';
+                    container.style.justifyContent = 'center';
+                    container.style.color = 'white';
+                    container.style.fontSize = '2.5rem';
+                    container.textContent = icons[index] || '📖';
+                });
+                
+                // 检查图片是否已经加载失败
+                if (img.complete && img.naturalHeight === 0) {
+                    img.dispatchEvent(new Event('error'));
+                }
+            });
+        });
+
+        // 社交媒体分享功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const shareButtons = document.querySelectorAll('.share-btn');
+            const shareLinkPopup = document.getElementById('shareLinkPopup');
+            const shareLinkInput = document.getElementById('shareLinkInput');
+            const copyLinkBtn = document.getElementById('copyLinkBtn');
+            const closeLinkPopup = document.getElementById('closeLinkPopup');
+
+            // 获取当前页面信息
+            const currentUrl = window.location.href;
+            const pageTitle = document.title;
+            const pageDescription = document.querySelector('meta[name="description"]')?.content || 'Check out this amazing Grounded 2 guide!';
+
+            // 分享URL配置
+            const shareUrls = {
+                facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
+                tiktok: `https://www.tiktok.com/share?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(pageTitle)}`,
+                instagram: `https://www.instagram.com/`, // Instagram不支持直接URL分享，引导到主页
+                whatsapp: `https://wa.me/?text=${encodeURIComponent(pageTitle + ' - ' + currentUrl)}`,
+                telegram: `https://t.me/share/url?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(pageTitle)}`
+            };
+
+            shareButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const platform = this.dataset.platform;
+
+                    if (platform === 'link') {
+                        // 显示链接复制弹窗
+                        shareLinkInput.value = currentUrl;
+                        shareLinkPopup.style.display = 'flex';
+                    } else if (platform === 'instagram') {
+                        // Instagram特殊处理 - 显示提示
+                        alert('Instagram doesn\'t support direct link sharing. Please copy the link and share it in your Instagram story or post!');
+                        // 可以选择打开Instagram主页
+                        window.open('https://www.instagram.com/', '_blank');
+                    } else if (shareUrls[platform]) {
+                        // 打开分享窗口
+                        const width = 600;
+                        const height = 400;
+                        const left = (window.innerWidth - width) / 2;
+                        const top = (window.innerHeight - height) / 2;
+                        
+                        window.open(
+                            shareUrls[platform],
+                            'share',
+                            `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+                        );
+                    }
+                });
+            });
+
+            // 复制链接功能
+            copyLinkBtn.addEventListener('click', function() {
+                shareLinkInput.select();
+                shareLinkInput.setSelectionRange(0, 99999); // 移动设备兼容
+
+                try {
+                    document.execCommand('copy');
+                    this.textContent = 'Copied!';
+                    this.style.background = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        this.textContent = 'Copy Link';
+                        this.style.background = '';
+                    }, 2000);
+                } catch (err) {
+                    // 现代浏览器使用Clipboard API
+                    if (navigator.clipboard) {
+                        navigator.clipboard.writeText(currentUrl).then(() => {
+                            this.textContent = 'Copied!';
+                            this.style.background = '#4CAF50';
+                            
+                            setTimeout(() => {
+                                this.textContent = 'Copy Link';
+                                this.style.background = '';
+                            }, 2000);
+                        });
+                    }
+                }
+            });
+
+            // 关闭弹窗
+            closeLinkPopup.addEventListener('click', function() {
+                shareLinkPopup.style.display = 'none';
+            });
+
+            // 点击弹窗外部关闭
+            shareLinkPopup.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                }
+            });
+
+            // ESC键关闭弹窗
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && shareLinkPopup.style.display === 'flex') {
+                    shareLinkPopup.style.display = 'none';
+                }
+            });
+        });
+                document.body.removeChild(textArea);
+                alert('Link copied to clipboard!');
+            });
+        }
+
+        // 移动端菜单切换
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // 返回顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 目录高亮
+        const tocLinks = document.querySelectorAll('.toc-list a');
+        const sections = document.querySelectorAll('h2[id]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC(); // 初始化
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grounded 2 Blog - Complete Guides & Tips Collection | Survival Strategies</title>
+    <meta name="description"
+        content="Explore our complete collection of Grounded 2 guides, tips, and strategies. From beginner tutorials to advanced secrets and weapon guides.">
+    <link rel="canonical" href="https://grounded2.lol/">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- SEO优化的meta标签 -->
+    <meta name="keywords"
+        content="Grounded 2 blog, survival guides, game tips, weapon guides, beginner tutorials, advanced strategies">
+    <meta property="og:title" content="Grounded 2 Blog - Complete Guides & Tips Collection">
+    <meta property="og:description"
+        content="Explore our complete collection of Grounded 2 guides, tips, and strategies. From beginner tutorials to advanced secrets.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grounded2.lol/blog">
+
+    <!-- Font Awesome 6.5.1 - 最新社交媒体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* 全局重置和基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Grounded 2 inspired color palette - 受游戏启发的配色方案 */
+            --primary-green: #4CAF50;
+            --accent-orange: #FF6B35;
+            --dark-green: #2E7D32;
+            --light-green: #81C784;
+            --brown-earth: #8D6E63;
+            --yellow-sun: #FFC107;
+            --blue-water: #2196F3;
+            --purple-mystery: #9C27B0;
+            --ice-blue: #00BCD4;
+            --dark-bg: #1A1A1A;
+            --light-bg: #F5F5F5;
+            --text-dark: #333;
+            --text-light: #FFF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--light-bg);
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-orange);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* 移动端菜单按钮 */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 主要内容区域 */
+        main {
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 博客头部区域 */
+        .blog-header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: var(--text-light);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .blog-header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .blog-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+        }
+
+        .blog-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* 博客内容区域 */
+        .blog-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* 分类过滤器 */
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--primary-green);
+            background: transparent;
+            color: var(--primary-green);
+            border-radius: 25px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* 博客文章网格 */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-card-header {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-card-header.beginner {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+        }
+
+        .blog-card-header.advanced {
+            background: linear-gradient(135deg, var(--purple-mystery), var(--blue-water));
+        }
+
+        .blog-card-header.weapons {
+            background: linear-gradient(135deg, var(--ice-blue), var(--blue-water));
+        }
+
+        .blog-card-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        .blog-card-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-card-content {
+            padding: 2rem;
+        }
+
+        .blog-card-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-card-excerpt {
+            color: var(--text-dark);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            opacity: 0.7;
+        }
+
+        .blog-card-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-tag {
+            background: var(--light-bg);
+            color: var(--text-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card-link:hover {
+            color: var(--accent-orange);
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+
+        /* 更新社交媒体图标样式 - 白色图标 */
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(139, 69, 69, 0.8);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(139, 69, 69, 0.6);
+        }
+
+        .social-icon:hover {
+            background: rgba(139, 69, 69, 1);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 69, 69, 0.4);
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-orange);
+            opacity: 1;
+        }
+
+        .contact-text {
+            color: var(--text-light);
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-email {
+            color: #00BCD4;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 响应式设计 - Footer */
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: left;
+            }
+            
+            .social-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-bg);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .blog-title {
+                font-size: 2.5rem;
+            }
+
+            .blog-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .blog-stats {
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .blog-content {
+                padding: 3rem 1rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .category-filter {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .blog-card-content {
+                padding: 1.5rem;
+            }
+
+            .blog-card-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent-orange);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+    </style>
+</head>
+<bod y>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                🐜 Grounded 2 lol
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#reviews">Reviews</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="/#guides" class="active">Guides</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 博客头部区域 -->
+        <section class="blog-header">
+            <div class="blog-header-container">
+                <h1 class="blog-title">Grounded 2 Complete Guide Collection</h1>
+                <p class="blog-subtitle">Master every aspect of survival in Brook Hollow Park with our comprehensive
+                    guides, from beginner basics to advanced secrets and unique weapon strategies.</p>
+                <div class="blog-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Complete Guides</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Pro Tips</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Up to Date</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 博客内容区域 -->
+        <div class="blog-content">
+            <!-- 分类过滤器 -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">All Guides</button>
+                <button class="filter-btn" data-category="beginner">Beginner</button>
+                <button class="filter-btn" data-category="advanced">Advanced</button>
+                <button class="filter-btn" data-category="weapons">Weapons</button>
+            </div>
+
+            <!-- 博客文章网格 -->
+            <div class="blog-grid">
+                <!-- 初学者指南 -->
+                <article class="blog-card" data-category="beginner">
+                    <a href="grounded-2-beginner-guide.html" style="text-decoration: none; color: inherit;">
+                        <div class="blog-card-header beginner" style="background-image: url('/assets/images/blog/thumbnails/grounded-2-beginner-guide-thumb.jpg'); background-size: cover; background-position: center;">
+                            <div class="blog-card-icon">🌱</div>
+                            <span class="blog-card-category">Beginner Guide</span>
+                        </div>
+                    </a>
+                    <div class="blog-card-content">
+                        <a href="grounded-2-beginner-guide.html" style="text-decoration: none; color: inherit;">
+                            <h2 class="blog-card-title">The Ultimate Grounded 2 Beginner Guide: Master Your Survival Journey
+                                in 2025</h2>
+                        </a>
+                        <div class="blog-card-meta">
+                            <span>📅 January 2025</span>
+                            <span>⏱️ 15 min read</span>
+                        </div>
+                        <p class="blog-card-excerpt">Complete beginner's guide covering everything from the
+                            revolutionary Omni Tool system to getting your first buggy companion. Learn essential
+                            survival strategies, base building, and gear progression.</p>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Beginner</span>
+                            <span class="blog-tag">Survival</span>
+                            <span class="blog-tag">Crafting</span>
+                            <span class="blog-tag">Base Building</span>
+                            <span class="blog-tag">Buggies</span>
+                        </div>
+                        <a href="grounded-2-beginner-guide.html" class="blog-card-link">
+                            Read Full Guide →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 高级秘密指南 -->
+                <article class="blog-card" data-category="advanced">
+                    <a href="hidden-grounded-2-secrets.html" style="text-decoration: none; color: inherit;">
+                        <div class="blog-card-header advanced" style="background-image: url('/assets/images/blog/thumbnails/hidden-grounded-2-secrets-thumb.jpg'); background-size: cover; background-position: center;">
+                            <div class="blog-card-icon">🔮</div>
+                            <span class="blog-card-category">Advanced Tips</span>
+                        </div>
+                    </a>
+                    <div class="blog-card-content">
+                        <a href="hidden-grounded-2-secrets.html" style="text-decoration: none; color: inherit;">
+                            <h2 class="blog-card-title">Hidden Grounded 2 Secrets: Advanced Tips That Will Change Your Game
+                            </h2>
+                        </a>
+                        <div class="blog-card-meta">
+                            <span>📅 January 2025</span>
+                            <span>⏱️ 20 min read</span>
+                        </div>
+                        <p class="blog-card-excerpt">Discover game-changing secrets most players never find. From the
+                            ant buggy stealth trick to advanced resource management hacks and hidden combat mechanics.
+                        </p>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Advanced</span>
+                            <span class="blog-tag">Secrets</span>
+                            <span class="blog-tag">Pro Tips</span>
+                            <span class="blog-tag">Combat</span>
+                            <span class="blog-tag">Resources</span>
+                        </div>
+                        <a href="hidden-grounded-2-secrets.html" class="blog-card-link">
+                            Discover Secrets →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 双持武器指南 -->
+                <article class="blog-card" data-category="weapons">
+                    <a href="grounded-2-dual-wielding-weapons.html" style="text-decoration: none; color: inherit;">
+                        <div class="blog-card-header weapons" style="background-image: url('/assets/images/blog/thumbnails/grounded-2-dual-wielding-weapons-thumb.jpg'); background-size: cover; background-position: center;">
+                            <div class="blog-card-icon">⚔️</div>
+                            <span class="blog-card-category">Weapon Guide</span>
+                        </div>
+                    </a>
+                    <div class="blog-card-content">
+                        <a href="grounded-2-dual-wielding-weapons.html" style="text-decoration: none; color: inherit;">
+                            <h2 class="blog-card-title">How to Get Unique Dual-Wielding Weapons: Ice Sickles & Northern
+                                Shredders</h2>
+                        </a>
+                        <div class="blog-card-meta">
+                            <span>📅 January 2025</span>
+                            <span>⏱️ 18 min read</span>
+                        </div>
+                        <p class="blog-card-excerpt">Complete walkthrough for obtaining the most coveted dual-wielding
+                            weapons in Grounded 2. Includes cold survival strategies, combat tips, and step-by-step
+                            retrieval guides.</p>
+                        <div class="blog-card-tags">
+                            <span class="blog-tag">Weapons</span>
+                            <span class="blog-tag">Dual Wielding</span>
+                            <span class="blog-tag">Ice Sickles</span>
+                            <span class="blog-tag">Combat</span>
+                            <span class="blog-tag">Unique Items</span>
+                        </div>
+                        <a href="grounded-2-dual-wielding-weapons.html" class="blog-card-link">
+                            Get Weapons →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main> <!--
+ 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- 第一栏：Logo和社交媒体 -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    🐜 Grounded 2 lol
+                </div>
+                <p class="footer-tagline">Master the miniature world with our comprehensive survival guides and strategies.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook" aria-label="Follow us on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter/X" aria-label="Follow us on Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Reddit" aria-label="Join our Reddit community">
+                        <i class="fab fa-reddit-alien"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Discord" aria-label="Join our Discord server">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 第二栏：有用链接 -->
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="/guide">Grounded 2 beginner guide</a></li>
+                    <li><a href="/guide">Grounded 2 classes guide</a></li>
+                    <li><a href="/guide">Grounded 2 starting tips</a></li>
+                    <li><a href="/guide">Grounded handle weapons</a></li>
+                    <li><a href="/guide">Grounded handle build</a></li>
+                </ul>
+            </div>
+
+            <!-- 第三栏：联系方式 -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p class="contact-text">Found a mistake or got a better idea? Hit me up!</p>
+                <a href="mailto:hello@grounded2.lol" class="contact-email">hello@grounded2.lol</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Grounded 2 lol. All rights reserved.</p>
+            <p>This site is not affiliated with Obsidian or Grounded 2.</p>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        // 移动端菜单切换
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // 返回顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 分类过滤功能
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有按钮的active类
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // 添加当前按钮的active类
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                // 过滤博客卡片
+                blogCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        // 添加淡入动画
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                        }, 100);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 博客卡片悬停效果增强
+        blogCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // 页面加载动画
+        window.addEventListener('load', () => {
+            blogCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+    </body>
+
+</html>

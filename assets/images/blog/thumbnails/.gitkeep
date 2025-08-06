@@ -1,0 +1,17 @@
+# Thumbnail Images Directory
+
+This directory contains thumbnail images for blog cards and listings.
+
+## Required Images:
+- grounded-2-beginner-guide-thumb.webp (400x300px)
+- grounded-2-beginner-guide-thumb.jpg (fallback)
+- hidden-grounded-2-secrets-thumb.webp (400x300px)
+- hidden-grounded-2-secrets-thumb.jpg (fallback)
+- grounded-2-dual-wielding-weapons-thumb.webp (400x300px)
+- grounded-2-dual-wielding-weapons-thumb.jpg (fallback)
+
+## Specifications:
+- Format: WebP (primary), JPG (fallback)
+- Dimensions: 400x300px (4:3 aspect ratio)
+- File Size: < 50KB (WebP), < 80KB (JPG)
+- Usage: Blog cards in listing pages and related articles

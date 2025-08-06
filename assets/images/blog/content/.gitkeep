@@ -1,0 +1,29 @@
+# Content Images Directory
+
+This directory contains images used within blog article content.
+
+## Suggested Images by Article:
+
+### Grounded 2 Beginner Guide:
+- grounded-2-beginner-guide-omni-tool.webp (Omni tool system)
+- grounded-2-beginner-guide-base-building.webp (Base construction)
+- grounded-2-beginner-guide-ant-buggy.webp (First buggy companion)
+- grounded-2-beginner-guide-analyzer.webp (Analyzer system)
+
+### Hidden Grounded 2 Secrets:
+- hidden-grounded-2-secrets-stealth-trick.webp (Ant buggy stealth)
+- hidden-grounded-2-secrets-resource-hack.webp (Resource management)
+- hidden-grounded-2-secrets-combat-tips.webp (Advanced combat)
+- hidden-grounded-2-secrets-hidden-locations.webp (Secret areas)
+
+### Dual-Wielding Weapons:
+- grounded-2-dual-wielding-weapons-ice-sickles.webp (Ice Sickles showcase)
+- grounded-2-dual-wielding-weapons-northern-shredders.webp (Northern Shredders)
+- grounded-2-dual-wielding-weapons-cold-gear.webp (Cold protection setup)
+- grounded-2-dual-wielding-weapons-ice-cart.webp (Ice cart location)
+
+## Specifications:
+- Format: WebP (primary), JPG/PNG (fallback)
+- Dimensions: Variable (max width 800px for inline images)
+- File Size: < 150KB per image
+- Usage: Inline content within blog articles

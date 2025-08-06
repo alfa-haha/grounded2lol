@@ -1,0 +1,102 @@
+<!-- Blog Image Usage Examples -->
+
+<!-- 1. Cover Image (Hero Section) -->
+<section class="article-header">
+    <div class="blog-cover-container">
+        <picture>
+            <source srcset="/assets/images/blog/covers/grounded-2-beginner-guide-cover.webp" type="image/webp">
+            <img src="/assets/images/blog/covers/grounded-2-beginner-guide-cover.jpg" 
+                 alt="The Ultimate Grounded 2 Beginner Guide" 
+                 class="blog-cover"
+                 data-webp="/assets/images/blog/covers/grounded-2-beginner-guide-cover.webp"
+                 data-fallback="/assets/images/blog/covers/grounded-2-beginner-guide-cover.jpg">
+        </picture>
+        <div class="blog-cover-overlay"></div>
+    </div>
+    <!-- Article header content -->
+</section>
+
+<!-- 2. Thumbnail Image (Blog Card) -->
+<article class="blog-card">
+    <div class="blog-thumbnail-container">
+        <picture>
+            <source srcset="/assets/images/blog/thumbnails/grounded-2-beginner-guide-thumb.webp" type="image/webp">
+            <img src="/assets/images/blog/thumbnails/grounded-2-beginner-guide-thumb.jpg" 
+                 alt="Grounded 2 Beginner Guide" 
+                 class="blog-thumbnail"
+                 data-webp="/assets/images/blog/thumbnails/grounded-2-beginner-guide-thumb.webp"
+                 data-fallback="/assets/images/blog/thumbnails/grounded-2-beginner-guide-thumb.jpg">
+        </picture>
+    </div>
+    <!-- Card content -->
+</article>
+
+<!-- 3. Content Images (Within Article) -->
+<div class="article-body">
+    <!-- Standard content image -->
+    <picture>
+        <source srcset="/assets/images/blog/content/grounded-2-beginner-guide-omni-tool.webp" type="image/webp">
+        <img src="/assets/images/blog/content/grounded-2-beginner-guide-omni-tool.jpg" 
+             alt="Omni Tool System in Grounded 2" 
+             class="blog-content-image centered"
+             data-webp="/assets/images/blog/content/grounded-2-beginner-guide-omni-tool.webp"
+             data-fallback="/assets/images/blog/content/grounded-2-beginner-guide-omni-tool.jpg">
+    </picture>
+    <p class="blog-image-caption">The revolutionary Omni Tool system streamlines resource gathering</p>
+
+    <!-- Lazy loaded image -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3C/svg%3E" 
+         data-src="/assets/images/blog/content/grounded-2-beginner-guide-base-building.webp"
+         data-fallback="/assets/images/blog/content/grounded-2-beginner-guide-base-building.jpg"
+         alt="Base Building Strategies" 
+         class="blog-content-image blog-image-lazy full-width">
+
+    <!-- Image gallery -->
+    <div class="blog-image-gallery">
+        <img src="/assets/images/blog/content/grounded-2-beginner-guide-analyzer.webp" 
+             alt="Analyzer System" 
+             class="blog-content-image">
+        <img src="/assets/images/blog/content/grounded-2-beginner-guide-ant-buggy.webp" 
+             alt="Ant Buggy Companion" 
+             class="blog-content-image">
+    </div>
+</div>
+
+<!-- 4. Category Icons -->
+<div class="blog-card-category">
+    <img src="/assets/images/blog/icons/beginner-icon.svg" 
+         alt="Beginner Guide" 
+         class="blog-icon category">
+    Beginner Guide
+</div>
+
+<!-- 5. Dynamic Image Loading (JavaScript) -->
+<script>
+// Example of dynamic image creation
+const imageHTML = BlogImageManager.createResponsiveImage(
+    'grounded-2-beginner-guide', 
+    'cover', 
+    'Grounded 2 Beginner Guide Cover',
+    'blog-cover-container'
+);
+document.getElementById('dynamic-image-container').innerHTML = imageHTML;
+
+// Example of getting image paths
+const coverPath = BlogImageManager.getImagePath('grounded-2-beginner-guide', 'cover');
+const thumbPath = BlogImageManager.getImagePath('grounded-2-beginner-guide', 'thumbnail');
+</script>
+
+<!-- CSS Classes Reference -->
+<style>
+/* Include the blog-images.css file in your main CSS */
+@import url('/assets/css/blog-images.css');
+
+/* Custom overrides if needed */
+.custom-image-style {
+    border: 3px solid var(--primary-green);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+</style>
+
+<!-- JavaScript Include -->
+<script src="/assets/js/blog-images.js"></script>

@@ -1,0 +1,17 @@
+# Cover Images Directory
+
+This directory contains hero/cover images for blog detail pages.
+
+## Required Images:
+- grounded-2-beginner-guide-cover.webp (1200x600px)
+- grounded-2-beginner-guide-cover.jpg (fallback)
+- hidden-grounded-2-secrets-cover.webp (1200x600px)
+- hidden-grounded-2-secrets-cover.jpg (fallback)
+- grounded-2-dual-wielding-weapons-cover.webp (1200x600px)
+- grounded-2-dual-wielding-weapons-cover.jpg (fallback)
+
+## Specifications:
+- Format: WebP (primary), JPG (fallback)
+- Dimensions: 1200x600px (2:1 aspect ratio)
+- File Size: < 200KB (WebP), < 300KB (JPG)
+- Usage: Hero sections of blog detail pages

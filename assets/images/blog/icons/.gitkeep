@@ -1,0 +1,17 @@
+# Icons Directory
+
+This directory contains small icons for categories and UI elements.
+
+## Required Icons:
+- beginner-icon.svg (Category: Beginner guides)
+- advanced-icon.svg (Category: Advanced tips)
+- weapons-icon.svg (Category: Weapon guides)
+- combat-icon.svg (Combat-related content)
+- crafting-icon.svg (Crafting-related content)
+- survival-icon.svg (Survival tips)
+
+## Specifications:
+- Format: SVG (primary), PNG (fallback)
+- Dimensions: 64x64px (PNG), scalable (SVG)
+- File Size: < 10KB
+- Usage: Category indicators, UI elements, small graphics

@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grounded 2 - Ultimate Survival Adventure Game | Official Guide & Tips</title>
+    <meta name="description"
+        content="Discover Grounded 2, the ultimate survival crafting game. Explore guides, tips, reviews and strategies for this miniature adventure in Brookhollow Park.">
+    <link rel="canonical" href="https://grounded2.lol/">
+
+    <!-- SEO优化的meta标签 -->
+    <meta name="keywords"
+        content="Grounded 2, survival game, crafting game, Obsidian Entertainment, multiplayer, co-op, early access">
+    <meta property="og:title" content="Grounded 2 - Ultimate Survival Adventure Game">
+    <meta property="og:description"
+        content="Master the miniature world of Grounded 2 with our comprehensive guides, tips, and strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://grounded2.lol/">
+
+    <!-- Font Awesome 6.5.1 - 最新社交媒体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* 全局重置和基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Grounded 2 inspired color palette - 受游戏启发的配色方案 */
+            --primary-green: #4CAF50;
+            --accent-orange: #FF6B35;
+            --dark-green: #2E7D32;
+            --light-green: #81C784;
+            --brown-earth: #8D6E63;
+            --yellow-sun: #FFC107;
+            --blue-water: #2196F3;
+            --purple-mystery: #9C27B0;
+            --dark-bg: #1A1A1A;
+            --light-bg: #F5F5F5;
+            --text-dark: #333;
+            --text-light: #FFF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-orange);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* 移动端菜单按钮 */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 主要内容区域 */
+        main {
+            margin-top: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 英雄区域 - 第一屏 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .hero-video-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0.3) 50%,
+                    rgba(0, 0, 0, 0.5) 100%);
+            z-index: -1;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-shadow: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun));
+            color: var(--text-light);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+            scale: 1.05;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+            border-color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            scale: 1.05;
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-green);
+        }
+
+        /* 游戏介绍区域 */
+        .game-description {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .description-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .description-content h2 {
+            font-size: 40px;
+            color: var(--dark-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .description-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .description-content .highlight {
+            background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        .description-content .emoji {
+            font-size: 1.3rem;
+            margin-right: 0.5rem;
+        }
+
+        .description-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+
+        .description-content li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .description-content li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .description-content .creator-note {
+            font-style: italic;
+            color: var(--dark-green);
+            font-weight: 600;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .description-content .cta-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            color: var(--accent-orange);
+            margin-top: 2rem;
+        }
+
+        .description-content .availability {
+            font-style: italic;
+            text-align: center;
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .description-video {
+            text-align: center;
+            margin: 2.5rem 0;
+            width: 100%;
+            height: 600px; /* Set container height for iframe 100% to work */
+        }
+
+        .description-video iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 数据看板区域 */
+        .stats-dashboard {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+            color: var(--text-light);
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-item:nth-child(1) .stat-number {
+            background: linear-gradient(45deg, #ff6b35, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-item:nth-child(2) .stat-number {
+            background: linear-gradient(45deg, #4caf50, #81c784);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-item:nth-child(3) .stat-number {
+            background: linear-gradient(45deg, #2196f3, #64b5f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-item:nth-child(4) .stat-number {
+            background: linear-gradient(45deg, #9c27b0, #ba68c8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+
+        /* 玩家评价区域 */
+        .reviews {
+            padding: 5rem 0;
+            background: var(--light-bg);
+            position: relative;
+            z-index: 2;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-green);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .review-stars {
+            color: var(--yellow-sun);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            flex-grow: 1;
+            font-size: 0.95rem;
+        }
+
+        .review-author {
+            font-weight: bold;
+            color: var(--dark-green);
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+
+
+        /* FAQ区域 */
+        .faq {
+            padding: 5rem 0;
+            background: var(--light-bg);
+            position: relative;
+            z-index: 2;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--primary-green);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            color: var(--text-dark);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* 博客指南区域 */
+        .blog-guides {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--brown-earth), var(--dark-green));
+            color: var(--text-light);
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-guides .section-title {
+            color: var(--text-light);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-excerpt {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            padding: 3rem 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-tagline {
+            font-size: 1rem;
+            color: var(--text-light);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+
+        /* 更新社交媒体图标样式 - 白色图标 */
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(139, 69, 69, 0.8);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(139, 69, 69, 0.6);
+        }
+
+        .social-icon:hover {
+            background: rgba(139, 69, 69, 1);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 69, 69, 0.4);
+        }
+
+        .footer-section h3 {
+            color: var(--accent-orange);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-orange);
+            opacity: 1;
+        }
+
+        .contact-text {
+            color: var(--text-light);
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-email {
+            color: #00BCD4;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 响应式设计 - Footer */
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: left;
+            }
+            
+            .social-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-bg);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .description-content {
+                padding: 0 1.5rem;
+            }
+
+            .description-content h2 {
+                font-size: 32px;
+            }
+
+            .description-content p {
+                font-size: 1rem;
+            }
+
+            .description-video {
+                height: 450px; /* Tablet height */
+            }
+
+            .description-video iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.8rem;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 0.9rem 1.8rem;
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .reviews-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-card {
+                min-height: 180px;
+            }
+
+            .description-content {
+                padding: 0 1rem;
+            }
+
+            .description-content h2 {
+                font-size: 28px;
+                margin-bottom: 1rem;
+            }
+
+            .description-content p {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+
+            .description-content .cta-text {
+                font-size: 1.1rem;
+            }
+
+            .description-video {
+                height: 300px; /* Mobile height */
+            }
+
+            .description-video iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-item {
+                padding: 2rem 1rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* 动画效果 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 悬浮按钮样式 */
+        .floating-action {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent-orange);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .floating-action:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                🐜 Grounded 2 lol
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#guides">Guides</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 英雄区域 - 第一屏 -->
+        <section class="hero">
+            <div class="hero-video-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="https://d1079ywfijtdjs.cloudfront.net/images/grounded2/videos/keyart-vid.webm"
+                        type="video/webm">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Grounded 2: Ultimate Survival Adventure</h1>
+                    <p>Shrunk again, but the world is much larger. Explore Brookhollow Park in this open-world survival
+                        crafting game where everyday objects become epic landscapes and insects transform into legendary
+                        creatures.</p>
+                    <div class="hero-buttons">
+                        <a href="https://store.steampowered.com/app/grounded2" class="btn btn-primary" target="_blank">
+                            🎮 Play Game Now
+                        </a>
+                        <a href="#guides" class="btn btn-secondary">
+                            📚 View Game Guides
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏介绍区域 -->
+        <section class="game-description">
+            <div class="description-content">
+                <h2>Grounded 2: Experience the Ultimate Survival Adventure</h2>
+                
+                <p><span class="emoji">🐛</span><strong class="highlight">You've been shrunk to ant-size – and the backyard has never been deadlier!</strong></p>
+                
+                <p>Transform into a tiny survivor in a massive world where a blade of grass towers like a skyscraper and everyday bugs become terrifying giants. This isn't your typical survival game – it's a mind-bending adventure that flips everything upside down.</p>
+                
+                <p><span class="emoji">🎮</span><strong>Why You'll Be Hooked:</strong></p>
+                <ul>
+                    <li><strong>Epic Scale</strong> - Experience the world from an ant's perspective</li>
+                    <li><strong>Intense Combat</strong> - Battle massive spiders and oversized insects</li>
+                    <li><strong>Build & Craft</strong> - Create weapons from bug parts, build bases from twigs</li>
+                    <li><strong>Co-op Fun</strong> - Survive with up to 4 friends</li>
+                    <li><strong>Ride Buggies</strong> - Cruise the miniature world in style</li>
+                </ul>
+                
+                <p class="creator-note">From the creators of Fallout: New Vegas comes the survival experience that makes you think small to survive big. Every dewdrop is precious, every leaf is shelter, and every bug is a boss fight waiting to happen.</p>
+                
+                <div class="description-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Shyth7f8zd4?si=IZ0S5LKB_rpPUQu1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <p class="cta-text">Ready to live large in a tiny world?</p>
+                <p class="availability">Available now in Early Access – Join the adventure where size doesn't matter, but survival does!</p>
+            </div>
+        </section>
+
+        <!-- 数据看板区域 -->
+        <section class="stats-dashboard">
+            <div class="stats-container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Survivors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Creatures</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Items to Craft</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Adventures</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- 玩家评价区域 -->
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2 class="section-title">Why Players Can't Stop Playing Grounded 2</h2>
+                <p style="text-align: center; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 3rem; opacity: 0.8;">Millions of survivors are hooked on Grounded 2's addictive crafting system, intense co-op battles, and the unique challenge of thriving in a supersized world.</p>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Honestly an amazing sequel. I never really got into the original as it was a bit hard and daunting as a solo beginner so it was very nice to see that grounded 2 is wayyy more beginner friendly. YOU CAN LITERALLY RIDE BUGS and they harvest resources for you, protect you and recruit other bugs."</p>
+                        <p class="review-author">- Juju (2 days ago)</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Was super excited to play this game since the trailer release, and it has been amazing! Great game, graphics look astonishing, and they definitely have upped the gameplay. Love that bugs can now block against your attacks, and new weapon upgrades as well as the omi tool."</p>
+                        <p class="review-author">- Hailey Westfall (4 days ago)</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"This sequel is amazing. I promise I'm not glazing. They solved every single problem with grounded 1 in the perfect way along with adding new features that make it feel both a sequel and a whole new game on its own. This is low-key the second best survival game I've never played."</p>
+                        <p class="review-author">- Joel Berry (6 days ago)</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Fantastic game! I am loving the new additions to the Grounded world. How did Obsidian make a game that only added to the world I love exploring? Obsidian definitely my favorite game developers, their games always impress."</p>
+                        <p class="review-author">- Emily A (5 days ago)</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Play it for the first time with my brother. It is currently 11:30 PM Eastern time we started playing at 3:30 PM Eastern time. It felt like an hour, but we were on all day. It's very good ngl I got 10 days on that game referring to the first one."</p>
+                        <p class="review-author">- melo andrews (4 days ago)</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Game is Great, They are Fixing Bugs Daily, Game still feels like grounded 1 but bigger and better, totally recommend for everyone to give it a try, it may be buggy BUT REMINDER, ITS EARLY ACCESS, SO STOP CRYING 1 STAR REVIEWS!!!!"</p>
+                        <p class="review-author">- SolidAksis TMan (1 hour ago)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 博客指南区域 -->
+        <section id="guides" class="blog-guides">
+            <div class="container">
+                <h2 class="section-title">Master Grounded 2 Before You Play</h2>
+                <p style="text-align: center; font-size: 1.1rem; color: var(--text-light); margin-bottom: 3rem; opacity: 0.9;">Everything from beginner tips to pro strategies - your ultimate Grounded 2 resource for conquering the tiny world.</p>
+                <div class="blog-grid">
+                    <a href="grounded-2-beginner-guide.html" class="blog-card" style="text-decoration: none; color: inherit;">
+                        <div class="blog-image" style="background-image: url('/assets/images/blog/thumbnails/grounded-2-beginner-guide-thumb.jpg'); background-size: cover; background-position: center; position: relative;">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">Complete Beginner's Guide to Grounded 2</h3>
+                            <p class="blog-excerpt">Master your first hour in the miniature world with essential
+                                survival priorities, resource identification, and basic crafting techniques.</p>
+                            <p class="blog-meta">📅 Updated Aug 2025 • ⏱️ 15 min read</p>
+                        </div>
+                    </a>
+                    <a href="hidden-grounded-2-secrets.html" class="blog-card" style="text-decoration: none; color: inherit;">
+                        <div class="blog-image" style="background-image: url('/assets/images/blog/thumbnails/hidden-grounded-2-secrets-thumb.jpg'); background-size: cover; background-position: center; position: relative;">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">Hidden Grounded 2 Secrets</h3>
+                            <p class="blog-excerpt">Discover game-changing secrets most players never find. From the
+                                ant buggy stealth trick to advanced resource management hacks and hidden combat mechanics.</p>
+                            <p class="blog-meta">📅 Updated Aug 2025 • ⏱️ 20 min read</p>
+                        </div>
+                    </a>
+                    <a href="grounded-2-dual-wielding-weapons.html" class="blog-card" style="text-decoration: none; color: inherit;">
+                        <div class="blog-image" style="background-image: url('/assets/images/blog/thumbnails/grounded-2-dual-wielding-weapons-thumb.jpg'); background-size: cover; background-position: center; position: relative;">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">Unique Dual-Wielding Weapons Guide</h3>
+                            <p class="blog-excerpt">Complete walkthrough for obtaining the most coveted dual-wielding
+                                weapons in Grounded 2. Includes cold survival strategies and step-by-step retrieval guides.</p>
+                            <p class="blog-meta">📅 Updated Aug 2025 • ⏱️ 18 min read</p>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="guide.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1.2rem 2.5rem; border-radius: 50px; font-size: 1.2rem; font-weight: bold; text-decoration: none; background: linear-gradient(45deg, var(--accent-orange), var(--yellow-sun)); color: var(--text-light); box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4); transition: all 0.3s ease;">
+                        📚 View All Guides
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ区域 -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">Grounded 2 FAQ - Start Smart, Survive Better</h2>
+                <p style="text-align: center; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 3rem; opacity: 0.8;">Get the insider knowledge you need about Grounded 2 to dominate the backyard from day one.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Grounded 2 currently available? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, Grounded 2 launched in Early Access on July 29, 2025, available on PC, Xbox, and through
+                        Game Pass.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I play solo or do I need friends? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Grounded 2 supports both single-player and cooperative multiplayer for up to 4 players. The game
+                        is fully enjoyable in either mode.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need to play the first Grounded? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No, Grounded 2 features a fresh story beginning, making it accessible to newcomers while
+                        offering nods to returning players.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What platforms is Grounded 2 available on? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Currently available on PC (Steam, Microsoft Store) and Xbox (Series X/S, One), with Game Pass
+                        inclusion. Steam Deck verified and ROG Ally compatible.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does the game support accessibility features? <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, including Arachnophobia Safe Mode, colorblind support, subtitle customization, narration
+                        through Read to Me, and various control options.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- 第一栏：Logo和社交媒体 -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        🐜 Grounded 2 lol
+                    </div>
+                    <p class="footer-tagline">Master the miniature world with our comprehensive survival guides and strategies.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Facebook" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter/X" aria-label="Follow us on Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Reddit" aria-label="Join our Reddit community">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Discord" aria-label="Join our Discord server">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 第二栏：有用链接 -->
+                <div class="footer-section">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="/guide">Grounded 2 beginner guide</a></li>
+                        <li><a href="/guide">Grounded 2 classes guide</a></li>
+                        <li><a href="/guide">Grounded 2 starting tips</a></li>
+                        <li><a href="/guide">Grounded handle weapons</a></li>
+                        <li><a href="/guide">Grounded handle build</a></li>
+                    </ul>
+                </div>
+
+                <!-- 第三栏：联系方式 -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p class="contact-text">Found a mistake or got a better idea? Hit me up!</p>
+                    <a href="mailto:hello@grounded2.lol" class="contact-email">hello@grounded2.lol</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grounded 2 lol. All rights reserved.</p>
+                <p>This site is not affiliated with Obsidian or Grounded 2.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 悬浮返回顶部按钮 -->
+    <button class="floating-action" id="backToTop" title="Back to Top">↑</button>
+
+    <script>
+        // 移动端菜单切换功能
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // FAQ折叠功能
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // 关闭所有其他FAQ项目
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // 切换当前项目
+                item.classList.toggle('active', !isActive);
+            });
+        });
+
+        // 返回顶部按钮功能
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 导航栏滚动效果
+        const navbar = document.querySelector('.navbar');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // 向下滚动时隐藏导航栏
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // 向上滚动时显示导航栏
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // 考虑固定导航栏高度
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 页面加载动画
+        window.addEventListener('load', () => {
+            const animatedElements = document.querySelectorAll('.animate-fade-in');
+            animatedElements.forEach(element => {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            });
+        });
+
+        // 滚动时的视差效果
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.hero');
+
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // 卡片悬停效果增强
+        const cards = document.querySelectorAll('.review-card, .blog-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+        });
+
+        // 博客卡片点击事件（可根据需要添加实际链接）
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        blogCards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                // 这里可以添加跳转到具体博客文章的逻辑
+                const guides = [
+                    '/guides/beginners-guide',
+                    '/guides/combat-strategies',
+                    '/guides/base-building',
+                    '/guides/vehicle-system',
+                    '/guides/multiplayer-coop',
+                    '/guides/crafting-progression'
+                ];
+
+                // window.location.href = guides[index];
+                console.log(`Navigate to: ${guides[index]}`);
+            });
+
+            // 添加鼠标指针样式
+            card.style.cursor = 'pointer';
+        });
+
+        // 性能优化：节流滚动事件
+        function throttle(func, limit) {
+            let inThrottle;
+            return function () {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
+        // 使用节流优化滚动事件
+        const throttledScrollHandler = throttle(() => {
+            // 滚动相关的性能敏感操作
+            const scrolled = window.pageYOffset;
+
+            // 更新导航栏背景透明度
+            const navbar = document.querySelector('.navbar');
+            const opacity = Math.min(scrolled / 100, 0.95);
+            navbar.style.background = `rgba(26, 26, 26, ${opacity})`;
+        }, 16); // 约60FPS
+
+        window.addEventListener('scroll', throttledScrollHandler);
+    </script>
+</body>
+
+</html>
