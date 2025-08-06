@@ -7,7 +7,7 @@
     <title>How to Get Unique Dual-Wielding Weapons in Grounded 2: Ice Sickles & Northern Shredders</title>
     <meta name="description"
         content="Complete guide to obtaining Ice Sickles and Northern Shredders in Grounded 2. Learn locations, requirements, and combat strategies for these unique dual-wielding weapons.">
-    <link rel="canonical" href="https://grounded2.lol/">
+    <link rel="canonical" href="https://grounded2.lol/grounded-2-dual-wielding-weapons.html">
 
     <!-- SEO优化的meta标签 -->
     <meta name="keywords"
@@ -1623,8 +1623,18 @@
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
 
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
             navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = navMenu.contains(event.target);
+            const isClickOnBtn = mobileMenuBtn.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnBtn) {
+                navMenu.classList.remove('active');
+            }
         });
 
         // 返回顶部按钮

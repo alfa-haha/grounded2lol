@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /.kiro/
+Disallow: /.vscode/
+Disallow: /docs/
+Disallow: /scripts/
+
+Sitemap: https://grounded2.lol/sitemap.xml
